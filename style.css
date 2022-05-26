@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@200;300;400&family=Mulish:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@200;300;400&family=Mulish:wght@200;300;400;600;700&display=swap');
 
 @font-face { font-family: 'Lighthaus'; font-style: normal; font-weight: normal; src: local('Lighthaus'), url('fonts/Lighthaus.woff') format('woff'); }
 
@@ -6,7 +6,7 @@ html, body{
     height: 100%;
     scroll-behavior: smooth;
     background-color: #fffaf3;
-    font-size: 1.25vw;
+    font-size: calc(14px + 1vw);
 }
 html *{
     box-sizing: border-box;
@@ -26,7 +26,7 @@ html *{
     color: #c99b61;
     text-decoration: none;
     font-family: 'montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 1rem;
     font-weight: 200;
 
 }
@@ -38,12 +38,20 @@ header{
     background-color: #fffaf3;
 }
 .enlace-logo{
+    height: 100%;
     flex: 0 1 37%;
     margin-left: 40px;
 }
 .header-logo{
+    height: 100%;
     width: 50%;
     margin-left: 40px;
+
+    background-image: url(img/logo.svg);    /*----------------------  cambiar a logo chico 760*/
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
 
 }
 
@@ -71,7 +79,7 @@ header .texto{
     font-family: 'Lighthaus';
     text-align: center;
     color: #c99b61;
-    font-size: 3.67rem;
+    font-size: 2.65rem;
 
 
     transition: transform  20s ease 1s;
@@ -129,24 +137,31 @@ h2{
     font-family: 'EB Garamond';
     font-style: italic;
     color: #c99b61;
-    font-size: 1.8em;
+    /* font-size: 1.8em; */
+    font-size: calc(20px + 1.2vw);
 }
 
 h1{
-    height: 430px;
-    width: 965px;
+    /* height: 430px;
+    width: 965px; */
     margin: 0px;
     margin-left: 50px;
-    margin-top: -50px;
+    padding-bottom: 50px;
+    /* margin-top: -50px; */
     position: relative;
     
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16em;
+    font-size: 12.8rem;
     font-weight: 100;
+    line-height: .7;
+
     -webkit-text-stroke: 1px #18434c70;
     -webkit-text-fill-color: #ffffff00;
     user-select: none;
 
+}
+.about-us h1{
+    width: 900px;
 }
 .about-us div{
     display: inline-block;
@@ -157,9 +172,21 @@ h1{
 .about-us{
     width: 100%;   
 }
-.imagen-esquina{
+.imagen-esquina{        /* en un flex end seguramente cuadre con
+                            las otras líneas a pesar de estar wrapped
+                            -despues de probar: 
+                                a lo mejor para guardar la composicion
+                                debiería hacer un no-wrap y hacer la compo
+                                adaptable no, guarda mucho sentido la imagen
+                                sola al margen derecho 
+
+                                otra idea es que en una mediaquery la imagen pase
+                                a centrarse, y se quede a la izquerda de las lineas
+                                manteniendo la contingencia
+                            
+                            */
     height: 650px;
-    width: 22%;
+    width: 19%;
     margin-top: 150px;
 
     border: 1px solid #c99b61;
@@ -175,6 +202,7 @@ h1{
     width: 100%;
     
     margin-bottom: 200px;
+    font-size: 28px;
 
     overflow-x: clip;
 }
@@ -184,9 +212,8 @@ h1{
 }
 .awards-box{
     min-height: 90%;
-    width: 78.05%;
+    width: 81.05%;
     margin-top: 40px;
-    padding-top: 85px;
     background-color: #18434c;
 
     color: white;
@@ -219,8 +246,8 @@ h1{
 }
 
 .awards-box::after{
-    height: 170.3%;
-    width: 1px;
+    height: 200%;
+    width: 1px;                       /*medai query 0.5 */
     background-color: #c99b61;
 
     position: absolute;
@@ -269,6 +296,7 @@ footer{
 
     color: white;
     font-family: 'Mulish', sans-serif;
+ 
     
     background-color: #18434c;
 
@@ -332,3 +360,708 @@ footer a{
 .ig{
     background-image: url(img/footer-logos/ig.svg)
 }
+
+
+
+/******************************************** ABOUT US **********************************/
+.about{
+    height: 100%;
+    width: 100%;
+}
+
+.about .header{
+    height: 70%;
+    width: 100%;
+    margin-top: 5%;
+
+    
+    background-color: #18434c;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .img{
+    width: 80%;
+    height: 80%;
+
+    border-radius: 0 200px 0 200px;
+    
+    background-image: url(img/team/pexels-rachel-claire-4577179.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.header h1{
+    -webkit-text-stroke: 1px #c99a6189;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+
+    transition: transform 20s ease;
+    
+}
+
+.header h1:hover{
+    transform: scale(1.15);
+   
+}
+
+.equipo{
+    min-height: 120%;
+    width: 100%;
+    margin-top: 90px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.equipo h1, .about h1{
+    font-size: 10rem;
+}
+
+.cocina, .sala{
+    margin-top: 115px;
+    height: 45%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.sala{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    overflow-x: clip;
+}
+.cocina{
+    justify-content: space-between;
+}
+
+.desc{
+    flex: 0 1 28%;
+
+    margin-top: 150px;
+}
+
+.equipo .img {
+    height: 500px;
+    width: 300px;
+    border: 1px solid #c99b61;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.chef1, .mait2{
+    border-radius: 0 100px 100px 0;
+}
+.chef2, .mait1{
+    border-radius: 100px 0 0 100px;
+
+}
+.chef1{
+    background-image: url(img/team/pexels-2102934.jpg);
+}
+.chef2{
+    background-image: url(img/team/pexels-cottonbro-3298687.jpg);
+}
+.mait1{
+    background-image: url(img/team/pexels-yan-krukov-6816363.jpg);
+}
+.mait2{
+    background-image: url(img/team/pexels-antoni-shkraba-4485370.jpg);
+}
+
+.equipo h1{
+    margin-left: 200px;
+    margin-top: -240px;
+}
+.desc{
+    font-family: 'Mulish';
+    font-size: 22px;
+    color: #18434c;
+    hyphens: auto;                                  /* -------------- TEXTOS WRAP ------------------*/
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.nombre{
+    display: block;
+    font-family: 'Lighthaus', sans-serif;
+    text-decoration: 1px underline;
+}
+.cargo{
+    font-family: 'EB Garamond';
+    font-style: italic;
+    font-size: 28PX;
+    font-weight: 500;
+
+}
+
+.desc span{
+    color: #c99b61;
+}
+
+
+
+
+/************************** GALERIA ********************************/
+
+.main-galeria{
+    min-height: 100%;
+    width: 100%;    
+    margin-bottom: 10%;
+
+    
+    overflow-x: clip;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.galeria-titulo{
+    display: flex;    
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.galeria-titulo h2{
+    margin-right: 36%;
+}
+.galeria-titulo h1{
+    margin-right: 20%;
+    position: relative;
+    z-index: 10;
+}
+.galeria{
+    width: 70%;
+    margin-right: 19%;
+    position: relative;
+    
+    columns: 3 320px;
+    column-gap: 3px;
+}
+
+.galeria::after{
+    height: 140%;
+    width: 1px;
+    background-color: #c99b61;
+    position: absolute;
+    top: -550px;
+    right: -1px;
+    content: "";
+}
+
+.galeria img{
+    max-width: 100%;
+    display: block;
+    margin-bottom: 3px;
+}
+.galeria .img-1,.galeria  .img-8,.galeria  .img-10{
+    background-position: center bottom;
+    background-size: cover;
+    margin-bottom: 3px;
+}
+.galeria .img-1{
+    column-span: all;
+    background-image: url(img/restaurante/ABaC-Restaurant-Marco-Pastori2.jpg);
+    height: 500px;
+    position: relative;
+    border-radius: 250px 0 0 0;
+}
+.galeria .img-1::before{
+    height: 1px;
+    width: 50%;
+
+    background-color: #c99b61;
+
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    content: "";
+}
+.galeria .img-8{
+    background-image: url(img/restaurante/pexels-anastasia-ilinamakarova-11566305.jpg);
+    height: 529px;
+}
+
+.galeria .img-10{
+    background-image: url(img/restaurante/pexels-anastasia-ilinamakarova-11566306.jpg);
+    height: 724px;
+    background-position: center center;
+
+}
+
+/*-----------------------------------------------reservas-----------------------------------------------*/
+
+.reservas{
+    width: 100%;
+    height: 180%;
+    padding-top: 60px;
+    background-color: #18434c;
+    border-top: #c99b61 1px solid;
+
+    color: #fff;
+    font-family:  'Mulish';
+    font-weight: 100;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.reservas h2{
+    margin: 0;
+    margin-left: 6%;
+    
+    font-weight: 500;
+}
+
+.cont-cal{
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+
+}
+
+.calendario-container{
+    width: 65%;
+    height: 100%;
+    padding-left: 100px;
+    min-width: 500px;
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendario{
+    height: 90%;
+    width: 50%;
+    min-width: 400px;
+
+    background-image: url(img/A4_Template_Calendar_Planning_May.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.indice{
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.completo, .cerrado{
+    height: 30px;
+    width: 30px;
+    margin-right: 4px;
+}
+.indice > div{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+
+    font-size: .8rem;
+
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.completo{
+    border: #c99b61 2px solid;
+}
+.cerrado{
+    background-color: gray;
+}
+.contacto{
+    width: 30%;
+    min-width: 500px;
+    height: 70%;
+
+}
+
+.contacto form{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+
+}
+.contacto input, textarea{
+    flex: unset !important;
+}
+.contacto input{
+    
+    height: 50px;
+    width: 60%;
+    margin: 15px 0;
+
+}
+
+.contacto textarea{
+    height: 220px;
+}
+.contacto textarea::placeholder{
+    font-size: .5rem;
+}
+.botones{
+    margin-top: 30px;
+    height: 60px;
+}
+
+
+
+.form-container{
+    width: 100%;
+    height: 40%;
+    
+    padding: 0 130px;
+    border-top: #c99b61 1px solid;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.form-container h2{
+    margin: 0;
+    
+}
+.form-container form{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*------------------------------------------------- FORMULARIOS MOD-----------------------------------*/
+input, textarea{
+    height: 40px;
+    min-width: 200px;
+    margin: 10px 0; 
+    margin-right: 40px;                                                                 /*   MQ :10px auto  */
+
+    background-color: #18434c;
+    border: 0;
+    border-bottom: #c99b61 1.5px solid;
+    color: #c99b61;
+    font-family: 'Mulish', sans-serif;
+
+    outline: none;
+    flex: 0 1 16%;
+
+    resize: none;
+    
+
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+    
+    background-image:url(fonts/calendar-icon.svg)
+}
+input[type=time]::-webkit-calendar-picker-indicator {
+    background-image: url(fonts/clock-icon.svg);
+}
+input::placeholder, textarea::placeholder{
+    color: #c99a61a9;
+}
+
+
+.form-button{
+    padding: 10px 30px;
+    background-color: #c99b61;
+
+    color: #18434c;
+    font-size: .7rem;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.mapa-container{
+    height: 35%;
+    width: 100%; 
+}
+.mapa{
+    margin-top: -50px;
+}
+.mapa-info{
+    height: 50px;
+    width: 100%;
+    position: relative;
+
+    background-color: #18434ce8;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+
+/*-------------------------    MENU  ----------------------------------------*/
+
+.menu .header-img{
+    padding: 50px;    
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-img .img{
+    height: 180px;
+    width: 40%;
+    min-width: 480px;
+    color: #c99b61;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all ease 1.3s;
+
+}
+.header-img .img-1{
+    align-self: flex-start;
+    text-align: end;
+    
+    padding-right: 50px;
+    background-image: url(img/carta/mainUp1bn.jpg);
+}
+.header-img .img-2{
+    margin: 0 auto;
+    text-align: center;
+
+
+    background-image: url(img/carta/mainUp3bn.jpg);
+}
+.header-img .img-2 h3{
+    margin-left: 20px;
+}
+.header-img .img-3{
+    margin-left: auto;
+
+    padding-left: 50px;
+    background-image: url(img/carta/mainUp2bn.jpg);
+}
+
+
+.header-img .img-1:hover{
+    background-image: url(img/carta/mainUp1.jpg);
+    color: #fffaf3;
+}
+.header-img .img-2:hover{
+    background-image: url(img/carta/mainUp3.png);
+    color: #fffaf3;
+}
+.header-img .img-3:hover{
+    background-image: url(img/carta/mainUp2.jpg);
+    color: #fffaf3 !important;
+}
+h3{
+    margin: 0;
+
+    line-height: 180px;
+ 
+    font-family: 'Lighthaus';
+    
+    font-size: 2.3rem;
+    font-weight: 200;
+
+}
+.titulo h2{
+    padding-left: 7%;
+}
+.titulo h1{
+    padding-left: 7%;
+}
+
+
+.carta{
+    width: 100%;
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.especialidades{
+    width: 100%;
+    padding-top: 50px;
+
+    
+    display: flex;
+    flex-direction: column;
+}
+.platos, .postres{
+    width: 100%;
+    /* padding: 0 50px; */
+
+    display: flex;
+    
+
+}
+.platos{   
+    height: 853px ;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.platos .plato1{
+    align-self: flex-start;
+}
+
+.platos .plato2{
+    align-self: flex-end;
+    
+}
+
+.platos h3{
+    height: 100px;
+    width: 290px;
+    margin-top: -10%;
+    margin-left: -46%;
+
+    font-size: 2rem;
+    line-height: 1;
+    /* transform: rotate(90deg);                  MQ maybe?
+    transform-origin: 3% 50%; */
+}
+
+.descr{
+    font-family: 'Mulish';
+    font-size: .8rem;
+    color: #18434c;
+}
+.nom{
+    display: block;
+    color: #c99b61;
+    font-family: 'Lighthaus';
+}
+
+.platos > div, .postres > div{
+    /* width: 50%; */
+}
+
+.platos .plato1 .foto, .platos .plato2 .foto{
+    height: 250px;                   /*************** MQ 150+450 ******/
+    width: 750px;
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.plato1 .descr, .plato2 .descr {
+
+    width: 600px;
+}
+
+.postres .postre1 .foto, .postres .postre2 .foto{
+    height: 900px;
+    width: 300px;                   /*************** MQ 450+150 ******/
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.platos .plato1 .foto{
+    background-image: url(img/carta/platosEscalon2.jpg);
+    background-position: center -84px;
+}
+.platos .plato2 .foto{
+    background-image: url(img/carta/huevas.jpg);
+    background-position: center -84px;
+}
+.postres .postre1 .foto{
+    background-image: url(img/carta/especial-postre1.jpg);
+}
+.postres .postre2 .foto{
+    background-image: url(img/carta/especial-postre2.jpg);
+
+}
+.postres{
+    margin: 80px 0;
+    min-height: 1500px;
+
+ 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.postre1{
+    align-self: flex-start;
+}
+.postre2{
+    align-self: flex-end;
+}
+.postre1 .descr, .postre2 .descr{
+    width: 300px;
+}
+.pos{
+    width: 200px;
+    height: 750px;
+    padding: 0 50px;
+}
+
+.pos h3{
+    width: 750px;
+    font-size: 2rem;
+    line-height: 1;
+    transform: rotate(90deg);           /*       MQ maybe?*/
+    transform-origin: 3% 50%; 
+}
+
+
+
+
+
+
+/*
+
+    flex:
+        problema cuando tenemos body hight 100%
+        y según vamos estrechando la pagina lo superamos
+        el footer y el contenido que topa con el final del
+        body empiezan a subir y comerse alr esto de elementos
+        Aparentemente se puede dandole al body un min-height del 100%
+        pero entonces todos los contenedores que requieren de un height
+        heredado por tener el suyo en % se ponen en height auto
+
+
+    flex: 01 01 x;
+
+
+    En definitiva, como debemos de definir el tamaño de los contendores
+    flex y de sus items/hijos, en qué caso se recomienda cada cosa (ejempos)
+    SOBRETODO EL HEIGHT al final el width si que entiendo su pael responsive
+
+    como evitar que en las animaciones por hover de cambio de 
+    background url pegue flash la primera vez
+
+
+
+
+*/
