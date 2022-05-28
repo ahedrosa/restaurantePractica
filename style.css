@@ -47,7 +47,7 @@ header{
     width: 50%;
     margin-left: 40px;
 
-    background-image: url(img/logo.svg);    /*----------------------  cambiar a logo chico 760*/
+    background-image: url(img/two-lines-logo.svg);    /*----------------------  cambiar a logo chico 760*/
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -293,6 +293,8 @@ footer{
     min-height: 60%;
     width: 100%;
     position: relative;
+
+    padding-left: 30px;
 
     color: white;
     font-family: 'Mulish', sans-serif;
@@ -606,7 +608,7 @@ footer a{
 
 .reservas{
     width: 100%;
-    height: 180%;
+    min-height: 1300px;
     padding-top: 60px;
     background-color: #18434c;
     border-top: #c99b61 1px solid;
@@ -627,8 +629,10 @@ footer a{
 }
 
 .cont-cal{
-    height: 50%;
+    min-height: 500px;
     width: 100%;
+
+    padding-bottom: 50px;
 
     display: flex;
     flex-direction: row;
@@ -640,9 +644,10 @@ footer a{
 
 .calendario-container{
     width: 65%;
-    height: 100%;
-    padding-left: 100px;
-    min-width: 500px;
+    height: 400px;
+    min-width: 500px; 
+
+    padding-left: 100px;    
     display: flex;
     align-content: space-around;
     justify-content: center;
@@ -727,9 +732,10 @@ footer a{
 
 .form-container{
     width: 100%;
-    height: 40%;
+    height: 300px;
     
-    padding: 0 130px;
+    padding-left: 170px;
+    margin-bottom: 50px;
     border-top: #c99b61 1px solid;
 
     display: flex;
@@ -792,6 +798,12 @@ input::placeholder, textarea::placeholder{
     font-size: .7rem;
     text-decoration: none;
     font-weight: 300;
+}
+
+.secondary-button{
+    color: #c99b61;
+    background-color: #18434c;
+    border: 1px solid #c99b61;
 }
 
 .mapa-container{
@@ -898,7 +910,7 @@ h3{
 
 .carta{
     width: 100%;
-    margin-top: 100px;
+    margin: 100px 0;
 
     display: flex;
     flex-direction: column;
@@ -907,6 +919,7 @@ h3{
 .especialidades{
     width: 100%;
     padding-top: 50px;
+
 
     
     display: flex;
@@ -921,7 +934,7 @@ h3{
 
 }
 .platos{   
-    height: 853px ;
+    height: 930px ;
 
     flex-direction: row;
     flex-wrap: wrap;
@@ -941,7 +954,6 @@ h3{
 .platos h3{
     height: 100px;
     width: 290px;
-    margin-top: -10%;
     margin-left: -46%;
 
     font-size: 2rem;
@@ -951,9 +963,17 @@ h3{
 }
 
 .descr{
+    padding: 10px;
+    
+    border: 1px solid #c99b61;
+    border-top: none;
+
     font-family: 'Mulish';
     font-size: .8rem;
     color: #18434c;
+}
+.platos .descr{
+    width: 750px;
 }
 .nom{
     display: block;
@@ -961,9 +981,6 @@ h3{
     font-family: 'Lighthaus';
 }
 
-.platos > div, .postres > div{
-    /* width: 50%; */
-}
 
 .platos .plato1 .foto, .platos .plato2 .foto{
     height: 250px;                   /*************** MQ 150+450 ******/
@@ -976,7 +993,7 @@ h3{
 
 .plato1 .descr, .plato2 .descr {
 
-    width: 600px;
+    width: 750px;
 }
 
 .postres .postre1 .foto, .postres .postre2 .foto{
@@ -1034,10 +1051,119 @@ h3{
     transform-origin: 3% 50%; 
 }
 
+.hidden{
+    display: none;
+}
 
+.degustacion{
+    width: 100%;
+    min-height: 2400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.degustacion .foto{
+    width: 600px;
+    height: 900px;
 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.mar-menu{
+    align-self: flex-start;    
+}
+.monte-menu{
+    align-self: flex-end;
+}
+.mar-menu .foto{
+    background-image: url(img/carta/degusp.jpg);
+}
 
+.monte-menu .foto{
+    background-image: url(img/carta/degusc.jpg);
+
+}
+.vino{
+    width: 75px;
+    height: 900px;
+
+    background-image: url(img/carta/vino.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.degustacion .descr{
+    width: 600px;
+    padding: 24px;
+
+    font-size: .6rem;
+    line-height: .9rem;
+    font-weight: 300;
+
+    hyphens: auto;                                  /* -------------- TEXTOS WRAP ------------------*/
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    border: 1px solid #c99b61;
+    border-bottom: none;
+    
+}
+
+.degustacion h3{
+    padding-left: 5px;
+}
+
+.menu ul{
+    width: 600px;
+    padding: 0;
+    padding-top: 20px;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    overflow-x: clip;
+
+}
+.menu li{
+    display: inline-block;
+    position: relative;
+
+    font-family: 'Mulish';
+    color: #18434c;
+    font-size: .6rem;
+    line-height: 1.3rem;
+
+}
+
+.menu li::after{
+    height: 1px;
+    width: 10px;
+    margin-left: 10px;
+    background-color: #c99b61;
+    position: absolute;
+    top: .64rem;
+    content: "";
+}
+.menu li::before{
+    height: 1px;
+    width: 10px;
+    background-color: #c99b61;
+    position: absolute;
+    top: .64rem;
+    left: -20px;
+    content: "";
+}
+.menus{
+    margin-bottom: 25px;
+}
 
 /*
 

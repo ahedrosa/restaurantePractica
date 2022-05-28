@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/favicon.svg" rel="icon">
     <link  rel="stylesheet" href="style.css ">
-    <title>Document</title>
+    
+    <title>Upåklagelig</title>
 </head>
 <body>
 
@@ -18,9 +20,9 @@
         </div> 
     
         <div class="header-img">
-            <div class="img img-1"><h3>Explora</h3></div>
-            <div class="img img-2"><h3>Tus</h3></div>
-            <div class="img img-3"><h3>Sentidos</h3></div>
+            <div class="img img-1"><h3>explora</h3></div>
+            <div class="img img-2"><h3>tus</h3></div>
+            <div class="img img-3"><h3>sentidos</h3></div>
         </div>
 
     </header>
@@ -34,8 +36,11 @@
         </div>
 
         <div class="especialidades">
-
-                <div class="platos">
+            
+            <div class="platos">
+                    <div class="hidden">
+                        <h3>especialidades</h3>
+                    </div>
                     <div class="plato1">
                         <div class="foto"></div> 
                         <div class="descr">
@@ -44,7 +49,7 @@
                             láminas de remolacha y especias
                         </div>
                     </div>
-                    <div class="esp">
+                    <div class="esp mq-hide">
                         <h3>especialidades</h3>
                     </div>
                     <div class="plato2">
@@ -55,8 +60,11 @@
                         </div>
                     </div>
                 </div>
-
+            
                 <div class="postres">
+                    <div class="hidden">
+                        <h3>postres estrella</h3>
+                    </div>
                     <div class="postre1">
                         <div class="foto"></div> 
                         <div class="descr">
@@ -65,7 +73,7 @@
                         </div>
                     </div>
 
-                    <div class="pos">
+                    <div class="pos mq-hide">
                         <h3>postres estrella</h3>
                     </div>
 
@@ -79,57 +87,80 @@
                 </div>        
         </div>
 
+        <div class="titulo">
+            <h2 class="manus">→ menús degustación</h2>
+        </div>
         <div class="degustacion">
 
-            
-            
+            <div id="mar" class="mar-menu">
+                <div class="foto-titulo">                    
+                    <h3>mar</h3>
+                    <div class="descr">
+                        La experiencia que te retrae a los primeros pasos en la playa,
+                        la humedad y la salitre marítimas. Una la degustación del pescado y marisco 
+                        más frescos desde las costas celtas, tras pasar por la mano de nuestro
+                        chef y acompañado por un verdejo, el Rueda de la bodega Emina
+                        con aromas frescos y afrutados sumados a su fermentación en barrica
+                        hacen de este vino la compañía perfecta para la combinación de platos que le ofrecemos.
+                    </div>
+                    <div class="foto"></div>
+                </div>
+                <div class="menu">
+                    <ul>
 
-            <div id="mar">
-                <!-- 
-                    Caldo Frío de Chocos - Paniza con refrito de tomate picante
-                    
-                    Espárragos Verdes de Alcalá del Valle, consomé frío de Galeras y Fino Goleta Tres
-                    
-                    “El dobladillo”. Tomate asado, emulsión de caballa en aceite. Torta de Pan de la Sierra de Cádiz
-                    
-                    La Tortillita de Camarones de El Faro de Cádiz
-                    
-                    Lomo de Lubina de Estero tostado, Mantequilla de Ostras de Cádiz, Limón y Salicornia
-                    
-                    Atún, manteca colorá y alcaparrón
-                    
-                    Níspero y Curry
-                    
-                    Borracho de Vainilla y Amontillado -->
+                        <li>Tartar de carabineros</li>
+                        <li>Txanguro</li>
+                        <li>Chicharrón de atún</li>
+                        <li>Ostra a la brasa</li>
+                        <li>Calamar relleno</li>
+                        <li>Lubina encurtida y emulsión de yemas de erizo</li>
+                        <li>Caldillo de perro en áspic</li>
+                        <li>Espineta frita</li>
+                        <li>Fondo marino con cocochas de merluza y moluscos</li>
+                        <li>Pulpito confitado, huitlacoche y piparras</li>
+                        <li>Huevas de atún a modo de riñones al Jerez</li>
+                        <li>Sorbete de lechuga de mar y manzana ácida</li>
+                        
+                    </ul>
+                </div>
                     
             </div>
+            
+            <div class="vino mq-hide"></div>
+
+            <div id="monte" class="monte-menu">      
                 
-            <div id="monte">
-                    
-                    <!-- Ibérica 
-                                
-                    Recluta 
-                    
-                    Steak tartar y échiré 
-                    
-                    Maíz, humo y mantequilla 
-                    
-                    Ortiguilla, huevo y caviar 
-                    
-                    Burger de foie, anguila y queso de cabra 
-                    
-                    Pastela Mozárabe 
-                    
-                    Tartar de gamba en escabeche con caviar 
-                    
-                    Boniato al fuego, tuétano y huevas 
-                    
-                    Oreja de judas en jugo de callos 
-                    
-                    Arroz de faisán con rebozuelo 
-                    
-                    Berenjena, demiglace de ras el hanout
-                    -->
+                <div class="foto-titulo">                    
+                    <h3>montaña</h3>  
+                    <div class="descr">
+                        Aromas a bog, roble y ciprés; texturas jugosas junto a otros frescos 
+                        y crujientes; una escala cromática que repasa todos los tonos verdes
+                        hasta llegar al marrón tostado, pasando por el rojo burdeos, nuestro menú 
+                        Montaña no les dejará indiferentes, lo acompañamos con un Pago de Carroviejas
+                        uno de los Riberas del Duero con más renombre, pero no menos sabor.
+
+                    </div>        
+                    <div class="foto"></div>
+                </div>
+
+                <div class="menu">                
+                    <ul>
+ 
+                        <li>Ibérica</li>
+                        <li>Recluta</li>
+                        <li>Steak tartar y échiré</li>
+                        <li>Maíz, humo y mantequilla</li>
+                        <li>Ortiguilla, huevo y caviar</li>
+                        <li>Burger de foie, anguila y queso de cabra</li>
+                        <li>Pastela Mozárabe</li>
+                        <li>Tartar de gamba en escabeche con caviar</li>
+                        <li>Boniato al fuego, tuétano y huevas</li>
+                        <li>Oreja de judas en jugo de callos</li>
+                        <li>Arroz de faisán con rebozuelo</li>
+                        <li>Berenjena, demiglace de ras el hanout</li>
+                        
+                    </ul>
+                </div>
             </div>
         
         
@@ -137,13 +168,19 @@
 
 
     </section>
+    
+    <!-- Llegar a Coque es iniciar un viaje gastronómico de cuatro pasos basado en los sabores y la innovación. Un viaje en 
+        el que incorporas todos los sentidos, incluyendo esos que solo tú crees poseer. Necesitarás no solo oler y paladear,
+        también tocar, palpar, imaginar y hasta recrear sabores que quizá nunca hayas acomodado en boca.
 
+        Un espacio ganado al anterior local recrea una coctelería para empezar el recorrido. Tras la inmersión, y rodeados 3.000 
+        referencias que hablan y cuentan historias, el “coliseo del vino embotellado” en tres alturas te acerca a una de las tres 
+        patas del universo Coque, la enología que lidera Rafael. Estás dentro y no quieres salir. El siguiente paso lo esperas: la 
+        cocina donde recibe Mario y en la que descubres su mítico horno de leña o un espacio para el I+D a la cocina de Mario.
 
-    <!-- Llegar a Coque es iniciar un viaje gastronómico de cuatro pasos basado en los sabores y la innovación. Un viaje en el que incorporas todos los sentidos, incluyendo esos que solo tú crees poseer. Necesitarás no solo oler y paladear, también tocar, palpar, imaginar y hasta recrear sabores que quizá nunca hayas acomodado en boca.
-
-Un espacio ganado al anterior local recrea una coctelería para empezar el recorrido. Tras la inmersión, y rodeados 3.000 referencias que hablan y cuentan historias, el “coliseo del vino embotellado” en tres alturas te acerca a una de las tres patas del universo Coque, la enología que lidera Rafael. Estás dentro y no quieres salir. El siguiente paso lo esperas: la cocina donde recibe Mario y en la que descubres su mítico horno de leña o un espacio para el I+D a la cocina de Mario.
-
-El último tramo lo conducirá Diego, el jefe de sala. Cómodamente sentado en el salón principal, la melodía llegará al clímax, también con carros y servicio de finalización de platos en mesa. Ya formas parte de Coque. Has aprendido y has saboreado. La herencia está transmitida. El futuro lo puedes tocar. -->
+        El último tramo lo conducirá Diego, el jefe de sala. Cómodamente sentado en el salón principal, la melodía llegará al clímax, 
+        también con carros y servicio de finalización de platos en mesa. Ya formas parte de Coque. Has aprendido y has saboreado. La 
+        herencia está transmitida. El futuro lo puedes tocar. -->
 
     <footer>
         <div class="footer-logo">
